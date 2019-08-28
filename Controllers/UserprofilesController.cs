@@ -19,10 +19,16 @@ namespace Circles_API.Controllers
         private static int _prevPage;
         private static int _nextPage;
 
+        // [HttpGet()]
+        // public ActionResult<IEnumerable<Userprofile>> GetAll()
+        // {
+        //     return _db.Userprofiles.ToList();
+        // }
+
         [HttpGet()]
-        public ActionResult<IEnumerable<Userprofile>> GetAll()
+        public int GetAll()
         {
-            return _db.Userprofiles.ToList();
+            return 555;
         }
 
         // GET api/userprofiles/first (first page)
