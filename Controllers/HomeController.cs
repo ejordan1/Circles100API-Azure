@@ -1,7 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace MessagesServer.Controllers
+namespace Circles_API.Controllers
 {
     public class HomeController : Controller
     {
