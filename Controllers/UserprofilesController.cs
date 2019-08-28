@@ -19,8 +19,16 @@ namespace Circles_API.Controllers
         private static int _prevPage;
         private static int _nextPage;
 
+        [HttpGet()]
+        public ActionResult<IEnumerable<Userprofile>> GetAll()
+        {
+            return _db.Userprofiles
+                .OrderBy(x => x.Name).ToList();
+        }
+
         // GET api/userprofiles/first (first page)
         // Optional query parameter keys: gender, location
+
         [HttpGet("first")]
         public ActionResult<IEnumerable<Userprofile>> GetFirstPage(string gender = null, string location = null)
         {
