@@ -19,6 +19,11 @@ namespace Circles_API.Controllers
         private static int _prevPage;
         private static int _nextPage;
 
+        public CirclesController(Circles_APIContext db)
+        {
+            _db = db;
+        }
+
         // GET api/circles
         [HttpGet]
         public ActionResult<IEnumerable<Circle>> GetAll()
