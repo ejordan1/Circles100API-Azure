@@ -22,8 +22,7 @@ namespace Circles_API.Controllers
         [HttpGet()]
         public ActionResult<IEnumerable<Userprofile>> GetAll()
         {
-            return _db.Userprofiles
-                .OrderBy(x => x.Name).ToList();
+            return _db.Userprofiles.ToList();
         }
 
         // GET api/userprofiles/first (first page)
